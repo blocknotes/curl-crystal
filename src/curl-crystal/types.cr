@@ -9,6 +9,7 @@ lib LibCurl
   type CurlHttppost = Void
   type CurlSlist = Void
 
+  type CurlWriteCallback = Void*, LibC::SizeT, LibC::SizeT, Void* -> LibC::SizeT
   type CurlFormgetCallback = Void*, LibC::Char*, LibC::SizeT -> LibC::SizeT
 
   # The following typedef's are signatures of malloc, free, realloc, strdup and

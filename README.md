@@ -32,6 +32,17 @@ LibCurl.curl_easy_perform curl  # run
 LibCurl.curl_easy_cleanup curl  # deinit
 ```
 
+Simple POST request:
+
+```ruby
+require "curl-crystal"
+curl = LibCurl.curl_easy_init  # init
+LibCurl.curl_easy_setopt curl, LibCurl::CURLoption::CURLOPT_URL, "http://localhost"
+LibCurl.curl_easy_setopt curl, LibCurl::CURLoption::CURLOPT_POSTFIELDS, "param1=Just+a+test&param2=12.345"
+LibCurl.curl_easy_perform curl  # run
+LibCurl.curl_easy_cleanup curl  # deinit
+```
+
 Invalid URL error:
 
 ```ruby
