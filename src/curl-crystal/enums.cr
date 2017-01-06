@@ -99,6 +99,20 @@ lib LibCurl
     CURL_LAST # never use!
   end
 
+  enum CURLFORMcode
+    CURL_FORMADD_OK  # first, no error
+
+    CURL_FORMADD_MEMORY 
+    CURL_FORMADD_OPTION_TWICE 
+    CURL_FORMADD_NULL 
+    CURL_FORMADD_UNKNOWN_OPTION 
+    CURL_FORMADD_INCOMPLETE 
+    CURL_FORMADD_ILLEGAL_ARRAY 
+    CURL_FORMADD_DISABLED  # libcurl was built with this disabled
+
+    CURL_FORMADD_LAST # last
+  end
+
   CURLINFO_STRING   = 0x100000
   CURLINFO_LONG     = 0x200000
   CURLINFO_DOUBLE   = 0x300000
@@ -1048,5 +1062,33 @@ lib LibCurl
     CURLOPT_PROXY_PINNEDPUBLICKEY = CURLOPTTYPE_STRINGPOINT + 263
 
     CURLOPT_LASTENTRY # the last unused
+  end
+
+  enum CURLSHcode
+    CURLSHE_OK,  # all is fine
+    CURLSHE_BAD_OPTION, # 1
+    CURLSHE_IN_USE,     # 2
+    CURLSHE_INVALID,    # 3
+    CURLSHE_NOMEM,      # 4 out of memory
+    CURLSHE_NOT_BUILT_IN, # 5 feature not present in lib
+    CURLSHE_LAST        # never use
+  end
+
+  enum CURLSHoption
+    CURLSHOPT_NONE,  # don't use
+    CURLSHOPT_SHARE,   # specify a data type to share
+    CURLSHOPT_UNSHARE, # specify which data type to stop sharing
+    CURLSHOPT_LOCKFUNC,   # pass in a 'curl_lock_function' pointer
+    CURLSHOPT_UNLOCKFUNC, # pass in a 'curl_unlock_function' pointer
+    CURLSHOPT_USERDATA,   # pass in a user data pointer used in the lock/unlock callback functions
+    CURLSHOPT_LAST  # never use
+  end
+
+  enum CURLversion
+    CURLVERSION_FIRST
+    CURLVERSION_SECOND
+    CURLVERSION_THIRD
+    CURLVERSION_FOURTH
+    CURLVERSION_LAST # never actually use this
   end
 end

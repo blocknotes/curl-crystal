@@ -1,7 +1,7 @@
 require "../curl-crystal"
 
 URL = "https://www.google.com"
-OUTPUT = "simple.html"
+OUTPUT = "easy_url_to_file.html"
 
 # Open a file for writing
 fp = LibStd.fopen( OUTPUT, "w" )

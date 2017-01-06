@@ -16,6 +16,13 @@ dependencies:
 
 ## Usage
 
+CURL version:
+
+```ruby
+require "curl-crystal"
+puts String.new LibCurl.curl_version
+```
+
 Fetch an URL an print the content to the STDOUT:
 
 ```ruby

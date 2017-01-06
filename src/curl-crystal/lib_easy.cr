@@ -1,8 +1,7 @@
 require "./enums"
+require "./types"
 
 lib LibCurl
-  type CURL = Void
-
   fun curl_easy_init(): CURL*
   fun curl_easy_setopt( curl : CURL*, option : CURLoption, ... ): CURLcode
   fun curl_easy_perform( curl : CURL* ): CURLcode
