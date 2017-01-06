@@ -32,6 +32,17 @@ LibCurl.curl_easy_perform curl  # run
 LibCurl.curl_easy_cleanup curl  # deinit
 ```
 
+Invalid URL error:
+
+```ruby
+require "curl-crystal"
+curl = LibCurl.curl_easy_init
+LibCurl.curl_easy_setopt curl, LibCurl::CURLoption::CURLOPT_URL, "https://aaa.bbb.ccc.ddd"
+ret = LibCurl.curl_easy_perform curl  # CURLE_COULDNT_RESOLVE_HOST
+puts ret.to_s + ": " + String.new( LibCurl.curl_easy_strerror( ret ) )
+LibCurl.curl_easy_cleanup curl
+```
+
 ## More examples
 
 - [examples](https://github.com/blocknotes/curl-crystal/tree/master/examples) folder
