@@ -2,6 +2,8 @@
 
 Crystal C bindings for libcurl, the multiprotocol file transfer library - see [libcurl](https://curl.haxx.se/libcurl/)
 
+**NOTE**: actually not all functions are mapped - if you find something missing [contact me](http://www.blocknot.es/me)
+
 ## Installation
 
 Add this to your application's `shard.yml`:
