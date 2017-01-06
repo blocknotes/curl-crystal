@@ -37,6 +37,10 @@ LibCurl.curl_easy_cleanup curl  # deinit
 - [examples](https://github.com/blocknotes/curl-crystal/tree/master/examples) folder
 - libcurl C [examples](https://curl.haxx.se/libcurl/c/example.html)
 
+## Notes
+
+Base on curl version: **7.52.1**
+
 ## Contributors
 
 - [Mattia Roccoberton](http://blocknot.es) - creator, maintainer, Crystal fan :)
