@@ -14,17 +14,21 @@ dependencies:
 
 ## Usage
 
+Fetch an URL an print the content to the STDOUT:
+
 ```ruby
 require "curl-crystal"
-curl = LibCurl.curl_easy_init
-LibCurl.curl_easy_setopt curl, LibCurl::CURLoption::CURLOPT_URL, "https://www.google.com"
-puts LibCurl.curl_easy_perform curl
-LibCurl.curl_easy_cleanup curl
+curl = LibCurl.curl_easy_init  # init
+LibCurl.curl_easy_setopt curl, LibCurl::CURLoption::CURLOPT_URL, "https://www.google.com"  # set URL
+LibCurl.curl_easy_setopt curl, LibCurl::CURLoption::CURLOPT_FOLLOWLOCATION, 1  # follow redirect
+LibCurl.curl_easy_perform curl  # run
+LibCurl.curl_easy_cleanup curl  # deinit
 ```
 
 ## More examples
 
-See [examples](https://github.com/blocknotes/curl-crystal/tree/master/examples) folder.
+- [examples](https://github.com/blocknotes/curl-crystal/tree/master/examples) folder
+- libcurl C [examples](https://curl.haxx.se/libcurl/c/example.html)
 
 ## Contributors
 
