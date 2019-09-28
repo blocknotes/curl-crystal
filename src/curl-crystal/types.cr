@@ -23,14 +23,14 @@ lib LibCurl
   type CurlCallocCallback = LibC::SizeT, LibC::SizeT -> Void*
 
   struct CurlVersionInfoData
-    age : CURLversion             # age of the returned struct
-    version : LibC::Char*         # LIBCURL_VERSION
-    version_num : LibC::UInt      # LIBCURL_VERSION_NUM
-    host : LibC::Char*            # OS/host/cpu/machine when configured
-    features : LibC::Int          # bitmask, see defines below
-    ssl_version : LibC::Char*     # human readable string
-    ssl_version_num : LibC::Long  # not used anymore, always 0
-    libz_version : LibC::Char*    # human readable string
+    age : CURLversion            # age of the returned struct
+    version : LibC::Char*        # LIBCURL_VERSION
+    version_num : LibC::UInt     # LIBCURL_VERSION_NUM
+    host : LibC::Char*           # OS/host/cpu/machine when configured
+    features : LibC::Int         # bitmask, see defines below
+    ssl_version : LibC::Char*    # human readable string
+    ssl_version_num : LibC::Long # not used anymore, always 0
+    libz_version : LibC::Char*   # human readable string
     # protocols is terminated by an entry with a NULL protoname
     protocols : LibC::Char**
 
@@ -48,5 +48,4 @@ lib LibCurl
 
     libssh_version : LibC::Char* # human readable string
   end
-
 end

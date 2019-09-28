@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 0.1.3
+- Code formatting and minor improvements to the project
+
 ## 0.1.2
 - Added lib curl bindings
 

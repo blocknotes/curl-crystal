@@ -1,9 +1,9 @@
 name: curl-crystal
-version: 0.1.2
+version: 0.1.3
 
 authors:
-  - Mat <mat@blocknot.es>
+  - Mattia Roccoberton <mat@blocknot.es>
 
-crystal: 0.20.4
+crystal: 0.31.0
 
 license: MIT
