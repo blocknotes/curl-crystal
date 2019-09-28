@@ -1,13 +1,13 @@
-require "../curl-crystal"
+require "../src/curl-crystal"
 
-URL = "https://www.google.com"
+URL    = "https://www.google.com"
 OUTPUT = "easy_url_to_file.html"
 
 # CURL init
 curl = LibCurl.curl_easy_init
 if curl
   # Open a file for writing
-  fd = LibStd.fopen( OUTPUT, "w" )
+  fd = LibStd.fopen(OUTPUT, "w")
 
   # CURL set options
   LibCurl.curl_easy_setopt curl, LibCurl::CURLoption::CURLOPT_WRITEDATA, fd

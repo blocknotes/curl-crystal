@@ -1,14 +1,14 @@
-require "../curl-crystal"
+require "../src/curl-crystal"
 
 INPUT = "curl.cr"
-URL = "http://localhost"
+URL   = "http://localhost:8080/easy_file_upload.php"
 
 # CURL init
 curl = LibCurl.curl_easy_init
 if curl
-  fd = LibStd.fopen( INPUT, "r" )
+  fd = LibStd.fopen(INPUT, "r")
   if fd
-    len = File.size( INPUT )
+    len = File.size(INPUT)
 
     # # CURL set options
     LibCurl.curl_easy_setopt curl, LibCurl::CURLoption::CURLOPT_URL, URL
@@ -22,8 +22,8 @@ if curl
     if ret == LibCurl::CURLcode::CURLE_OK
       puts "OK"
       speed_upload = total_time = uninitialized LibC::Double
-      LibCurl.curl_easy_getinfo( curl, LibCurl::CURLINFO::CURLINFO_SPEED_UPLOAD, pointerof( speed_upload ) )
-      LibCurl.curl_easy_getinfo( curl, LibCurl::CURLINFO::CURLINFO_TOTAL_TIME, pointerof( total_time ) )
+      LibCurl.curl_easy_getinfo(curl, LibCurl::CURLINFO::CURLINFO_SPEED_UPLOAD, pointerof(speed_upload))
+      LibCurl.curl_easy_getinfo(curl, LibCurl::CURLINFO::CURLINFO_TOTAL_TIME, pointerof(total_time))
       puts "Speed: #{speed_upload} bytes/sec in #{total_time} seconds"
     else
       p ret

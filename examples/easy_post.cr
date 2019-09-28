@@ -1,8 +1,8 @@
-require "../curl-crystal"
+require "../src/curl-crystal"
 
 # Create a simple PHP script like: <pre><?php var_dump( $_POST ); ?></pre>
 # And start listening: php -S 0.0.0.0:80
-URL = "http://localhost"
+URL = "http://localhost:8080/easy_file_upload.php"
 
 # CURL init
 curl = LibCurl.curl_easy_init
