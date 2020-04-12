@@ -1,4 +1,11 @@
-# libcurl for Crystal [![Build Status](https://travis-ci.org/blocknotes/curl-crystal.svg)](https://travis-ci.org/blocknotes/curl-crystal)
+# libcurl for Crystal - PROJECT UNMAINTAINED [![Build Status](https://travis-ci.org/blocknotes/curl-crystal.svg)](https://travis-ci.org/blocknotes/curl-crystal)
+
+> *This project is not maintained anymore*
+>
+> *If you like it or continue to use it fork it please.*
+
+* * *
+* * *
 
 Crystal C bindings for libcurl, the multiprotocol file transfer library - see [libcurl](https://curl.haxx.se/libcurl/)
 
